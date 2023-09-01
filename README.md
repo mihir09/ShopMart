@@ -1,27 +1,75 @@
 # ShopMart
+<p>
+An online shopping application built using Angular. It features user-authentication using Firebsae Google Auth Provider. Protected links that are only visible to admin and some requires uers to be logged in.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Current features and visibility:
 
-## Development server
+Home,<br>
+Shopping Cart - Login reguired,<br>
+Products,<br>
+Manage Products - Login reguired (Soon to be changed to admin only),<br>
+Manage Products -> Add Products - Login reguired (Soon to be changed to admin only)
+
+Adding product using Template driven forms
+Serverless Application built upon Firebase
+</p>
+
+## Local Development
+
+Setup you own firebase project then,
+
+Add new folder named environments in src folder
+
+Inside that folder add file named environments.ts with following contents
+
+```
+export const environment = {
+    production: false,
+    firebase: {
+        apiKey: "",
+        authDomain: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: "",
+        appId: "",
+        measurementId: ""
+    }
+};
+```
+
+Add file named environments.development.ts with following contents
+
+```
+export const environment = {
+    production: true,
+    firebase: {
+        apiKey: "",
+        authDomain: "",
+        projectId: "",
+        storageBucket: "",
+        messagingSenderId: "",
+        appId: "",
+        measurementId: ""
+    }
+};
+```
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Live Deployment
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+https://shopmart-698a1.web.app/
 
-## Build
+## Snap Shots
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Home Page 
 
-## Running unit tests
+![Home](gitSnaps/Home.png "Home Page")
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Admin Procducts 
 
-## Running end-to-end tests
+![Admin Products](gitSnaps/AdminManageProducts.png "Admin Procducts Page")
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Admin Add New Product 
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Admin Add New Product ](gitSnaps/AdminAddProduct.png "Admin Add New Product ")
