@@ -12,6 +12,7 @@ Manage Products -> Add Products - Login reguired (Soon to be changed to admin on
 
 Adding product using Template driven forms
 Serverless Application built upon Firebase
+Added Search, Update, Delete and Cancel operations for the product.
 </p>
 
 ## Local Development
@@ -66,10 +67,14 @@ https://shopmart-698a1.web.app/
 
 ![Home](gitSnaps/Home.png "Home Page")
 
-2. Admin Procducts 
+2. Admin Add New Product 
+
+![Admin Add New Product ](gitSnaps/AdminAddProduct.png "Admin Add New Product ")
+
+3. Admin Procducts 
 
 ![Admin Products](gitSnaps/AdminManageProducts.png "Admin Procducts Page")
 
-3. Admin Add New Product 
+4. Update Product 
 
-![Admin Add New Product ](gitSnaps/AdminAddProduct.png "Admin Add New Product ")
+![Update Product ](gitSnaps/UpdateProduct.png "Update Product ")

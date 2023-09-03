@@ -53,8 +53,10 @@ import { ProductService } from './product.service';
       { path:'products', component: ProductsComponent},
       { path:'login', component: LoginComponent},
       { path:'shopping-cart', component: ShoppingCartComponent, canActivate: [AuthGuard]},
-      { path:'admin/products', component: AdminProductsComponent, canActivate: [AuthGuard, ]},
       { path:'admin/products/new', component: ProductFormComponent, canActivate: [AuthGuard, ]},
+      { path:'admin/products/:id', component: ProductFormComponent, canActivate: [AuthGuard, ]},
+      { path:'admin/products', component: AdminProductsComponent, canActivate: [AuthGuard, ]},
+      // { path:'admin/products/new', component: ProductFormComponent, canActivate: [AuthGuard, AdminAuthGuard]},
 
     ])
   ],
