@@ -57,7 +57,7 @@
     </div>
     <div class="col-md-6">
         <br>
-        <div class="card" style="width: 18rem;">
+        <div *ngIf="f.touched && (title.valid || price.valid || imageUrl.valid)" class="card" style="width: 18rem;">
             <img [src]="product.imageUrl" class="card-img-top" alt="" *ngIf="product.imageUrl">
             <div class="card-body">
               <h5 class="card-title">{{product.title}}</h5>
