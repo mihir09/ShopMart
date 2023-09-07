@@ -1,6 +1,9 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { ProductService } from 'src/app/product.service';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatSort} from '@angular/material/sort';
+import {MatPaginator} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-admin-products',
@@ -9,14 +12,28 @@ import { ProductService } from 'src/app/product.service';
 })
 export class AdminProductsComponent implements OnDestroy{
 
-  products!: any[];
-  filteredProducts!: any[];
   subscription: Subscription;
+  productsData!: MatTableDataSource<any>;
+  displayedColumns: string[] = ['title','price','category','update','delete'];
+  query: string ='';
 
-  
+  @ViewChild(MatSort) sort!: MatSort;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
   constructor(private productService: ProductService) {
     this.subscription = this.productService.getAll().subscribe(products => {
-      this.products = this.filteredProducts = products;});
+      this.productsData = new MatTableDataSource(products)
+      this.productsData.paginator = this.paginator;
+      this.productsData.sort = this.sort;
+      this.productsData.filterPredicate = (data, filter) =>this.displayedColumns.some(element => {
+        if (element === 'price') {
+          return data[element] && data[element].toString().includes(filter);
+        }
+        else{
+        return data[element] && data[element].toLowerCase().includes(filter);
+        } 
+      })
+    });
   }
 
   deleteProduct(productId: string){
@@ -24,10 +41,12 @@ export class AdminProductsComponent implements OnDestroy{
       return this.productService.delete(productId);
   }
 
-  filterProducts(query: string){
-    this.filteredProducts = (query) ? 
-    this.products.filter(p=> p.data.title.toLowerCase().includes(query.toLowerCase())) :
-    this.products;
+  filterProducts(){
+    this.productsData.filter = this.query.toLowerCase();
+  }
+  onClear(){
+    this.query='';
+    this.filterProducts();
   }
 
   ngOnDestroy(){

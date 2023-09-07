@@ -13,6 +13,8 @@ Manage Products -> Add Products - Login reguired (Soon to be changed to admin on
 Adding product using Template driven forms
 Serverless Application built upon Firebase
 Added Search, Update, Delete and Cancel operations for the product.
+
+Modified the products UI with additional features of pagination, sorting and search built using Angular Material
 </p>
 
 ## Local Development
@@ -75,6 +77,10 @@ https://shopmart-698a1.web.app/
 
 ![Admin Products](gitSnaps/AdminManageProducts.png "Admin Procducts Page")
 
-4. Update Product 
+4. Admin Procducts Filter and Sort
+
+![Admin Products Filter and Sort](gitSnaps/AdminManageProductsFilterAndSort.png "Admin Procducts Page Filter and Sort")
+
+5. Update Product 
 
 ![Update Product ](gitSnaps/UpdateProduct.png "Update Product ")

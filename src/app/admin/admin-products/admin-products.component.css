@@ -1,14 +1,3 @@
-.modify> i {
-    padding: 5px;
-    cursor: pointer;
-}
-
-.fa-pen-to-square:hover{
-    transform: scale(1.3);
-    color: #0275d8;
-}
-
-.fa-trash:hover{
-    transform: scale(1.3);
-    color: #ff0000;
+.hide{
+    display: none;
 }

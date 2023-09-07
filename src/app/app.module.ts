@@ -5,6 +5,8 @@ import { AngularFireModule} from '@angular/fire/compat'
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
+import { MaterialModule } from './material/material.module';
+
 import { ReactiveFormsModule } from '@angular/forms'
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -26,6 +28,7 @@ import { AdminAuthGuardService as AdminAuthGuard } from './admin-auth-guard.serv
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { CategoryService } from './category.service';
 import { ProductService } from './product.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -41,6 +44,7 @@ import { ProductService } from './product.service';
   ],
   imports: [
     BrowserModule,
+    MaterialModule,
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
@@ -58,7 +62,8 @@ import { ProductService } from './product.service';
       { path:'admin/products', component: AdminProductsComponent, canActivate: [AuthGuard, ]},
       // { path:'admin/products/new', component: ProductFormComponent, canActivate: [AuthGuard, AdminAuthGuard]},
 
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
   providers: [
     AuthService,
