@@ -31,8 +31,8 @@
             <div class="form-group">
                 <label for="category">Category</label>
                 <select #category="ngModel" [(ngModel)]="product.category" name="category" id="category" class="form-control" required>
-                    <option *ngFor="let category of categories$ | async" [value]="category.key">
-                        {{category.payload.val().name}}
+                    <option *ngFor="let category of categories$ | async" [value]="category.id">
+                        {{category.name}}
                     </option>
                 </select>
                 <div class="alert alert-danger" *ngIf="category.touched && category.invalid">
