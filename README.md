@@ -14,7 +14,11 @@ Adding product using Template driven forms
 Serverless Application built upon Firebase
 Added Search, Update, Delete and Cancel operations for the product.
 
-Modified the products UI with additional features of pagination, sorting and search built using Angular Material
+Modified the products UI with additional features of pagination, sorting and search built using Angular Material.
+
+Seperated component of product card and product category filter for making them reusable and readbility of the code.
+
+Displays products with categories filter options. Sticky options so that categories can be selected while scrolling products. 
 </p>
 
 ## Local Development
@@ -84,3 +88,15 @@ https://shopmart-698a1.web.app/
 5. Update Product 
 
 ![Update Product ](gitSnaps/UpdateProduct.png "Update Product ")
+
+6. Products Page
+
+![Products Page](gitSnaps/Products.png "Products Page")
+
+7. Products Filtered by selected category
+
+![Products Filtered by selected category](gitSnaps/ProductsFiltered.png "Products Filtered by selected category")
+
+8. Products Sticky Options
+
+![Products Sticky Options](gitSnaps/ProductsStickyOptions.png "Products Sticky Options")

@@ -1,1 +1,16 @@
-<p>products works!</p>
+<div class="container text-center my-5">
+    <div class="row">
+        <div class="col-3">
+            <product-filter [category]="category"></product-filter>
+        </div>
+        <div class="col">
+            <div class="row row-cols-1 row-cols-md-2 align-items-center justify-content-evenly g-5">
+                <div
+                    *ngFor="let product of filteredProducts"
+                    class="col" style="width: 18rem;">
+                    <product-card [product]="product"></product-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

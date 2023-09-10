@@ -21,6 +21,5 @@ export class CategoryService {
           })
       )
   );
-    // return this.db.list('/categories').snapshotChanges();
   }
 }
