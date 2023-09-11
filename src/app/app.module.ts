@@ -31,6 +31,7 @@ import { ProductService } from './product.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { ShoppingCartService } from './shopping-cart.service';
 
 
 @NgModule({
@@ -60,7 +61,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
       { path:'', component: HomeComponent},
       { path:'products', component: ProductsComponent},
       { path:'login', component: LoginComponent},
-      { path:'shopping-cart', component: ShoppingCartComponent, canActivate: [AuthGuard]},
+      { path:'shopping-cart', component: ShoppingCartComponent},
       { path:'admin/products/new', component: ProductFormComponent, canActivate: [AuthGuard, ]},
       { path:'admin/products/:id', component: ProductFormComponent, canActivate: [AuthGuard, ]},
       { path:'admin/products', component: AdminProductsComponent, canActivate: [AuthGuard, ]},
@@ -75,7 +76,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
     UserService,
     AdminAuthGuard,
     CategoryService,
-    ProductService
+    ProductService,
+    ShoppingCartService,
   ],
   bootstrap: [AppComponent]
 })

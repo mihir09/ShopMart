@@ -4,11 +4,11 @@
             <product-filter [category]="category"></product-filter>
         </div>
         <div class="col">
-            <div class="row row-cols-1 row-cols-md-2 align-items-center justify-content-evenly g-5">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 align-items-center justify-content-evenly g-5">
                 <div
                     *ngFor="let product of filteredProducts"
-                    class="col" style="width: 18rem;">
-                    <product-card [product]="product"></product-card>
+                    class="col">
+                    <product-card [product]="product" [shopping-cart]="cart"></product-card>
                 </div>
             </div>
         </div>
