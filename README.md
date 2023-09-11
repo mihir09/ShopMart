@@ -22,6 +22,12 @@ Seperated component of product card and product category filter for making them 
 ### Shopping Carts
 Displays total quantity of the cart on navbar in a pill. Automatically updates when quantity of product in cart changes.
 
+It shows a list of products in cart and the quantiy, price and total price of each product.
+
+It also shows the total value of the cart along with total quantity.
+
+Need to resolve issue when making quantity 0 dosen't remove product from the cart.
+
 ### Manage Products -> Add Products
 Adding product using Template driven forms
 Serverless Application built upon Firebase
@@ -118,3 +124,7 @@ https://shopmart-698a1.web.app/
 10. Remove Product From Cart
 
 ![Remove Product From Cart](gitSnaps/RemoveProductFromCart.png "Remove Product From Cart")
+
+11. Shopping Cart
+
+![Shopping Cart](gitSnaps/ShoppingCart.png "Shopping Cart")
