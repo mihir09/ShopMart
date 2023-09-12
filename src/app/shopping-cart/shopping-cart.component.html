@@ -1,5 +1,5 @@
 <h1>Shopping Cart</h1>
-<ng-container *ngIf="cart$ | async as cart">
+<div *ngIf="(cart$ | async) as cart">
     <p>
         You have {{ cart.totalItemsCount }} items in your shopping cart.
     </p>
@@ -8,23 +8,29 @@
         <thead>
             <tr>
                 <th>Product</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total Price</th>
+                <th></th>
+                <th style="width: 200px">Price</th>
+                <th class="text-center" style="width: 200px">Quantity</th>
+                <th class="text-end" style="width: 200px">Total Price</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let item of cart.items">
                 <td>
-                    {{ item.product.title }}
+                    {{ item.title }}
                 </td>
                 <td>
-                    {{ item.product.price }}
+                    <div [style.backgroundImage]='"url("+item.imageUrl+")"' class="thumbnail"></div>
                 </td>
                 <td>
-                    {{ item.quantity }}
+                    {{ item.price }}
                 </td>
-                <td>
+                <td class="text-center">
+                    <div>
+                        <product-quantity [product]="item" [shopping-cart]="cart"></product-quantity>
+                    </div>
+                </td>
+                <td class="text-end">
                     {{ item.totalPrice | currency:'USD':true }}
                 </td>
             </tr>
@@ -33,9 +39,13 @@
             <tr>
                 <th></th>
                 <th></th>
-                <th>{{ cart.totalItemsCount }}</th>
-                <th>{{ cart.totalPrice | currency:'USD':true }}</th>
+                <th></th>
+                <th class="text-center">{{ cart.totalItemsCount }}</th>
+                <th class="text-end">{{ cart.totalPrice | currency:'USD':true }}</th>
             </tr>
         </tfoot>
     </table>
-</ng-container>
+    <button 
+        (click)="clearCart()"
+        class="btn btn-danger btn-sm">Clear Shopping Cart</button>
+</div>

@@ -4,7 +4,9 @@
             <product-filter [category]="category"></product-filter>
         </div>
         <div class="col">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 align-items-center justify-content-evenly g-5">
+            <div
+                *ngIf="cart$ | async as cart"
+                class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 align-items-center justify-content-evenly g-5">
                 <div
                     *ngFor="let product of filteredProducts"
                     class="col">

@@ -128,3 +128,11 @@ https://shopmart-698a1.web.app/
 11. Shopping Cart
 
 ![Shopping Cart](gitSnaps/ShoppingCart.png "Shopping Cart")
+
+11. Remove Product From Shopping Cart
+
+![Remove Product From Shopping Cart](gitSnaps/RemoveProductFromShoppingCart.png "Remove Product From Shopping Cart")
+
+11. Clear Shopping Cart
+
+![Clear Shopping Cart](gitSnaps/ClearShoppingCart.png "Clear Shopping Cart")
