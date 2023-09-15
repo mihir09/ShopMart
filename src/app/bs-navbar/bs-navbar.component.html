@@ -29,11 +29,13 @@
                         {{appUser.name}}
                     </a>
                     <ul ngbDropdownMenu class="dropdown-menu">
-                        <li><a class="dropdown-item" routerLink="my/orders">My Orders</a></li>
-                        <li><a class="dropdown-item" routerLink="admin/products">Manage Products</a></li>
-                        <!-- <ng-container *ngIf="appUser.isAdmin">
+                        <li><a class="dropdown-item" routerLink="my-orders">My Orders</a></li>
+                        <ng-container *ngIf="appUser.isAdmin">
                             <li><a class="dropdown-item" routerLink="admin/products">Manage Products</a></li>
-                        </ng-container> -->
+                        </ng-container>
+                        <ng-container *ngIf="appUser.isAdmin">
+                            <li><a class="dropdown-item" routerLink="admin/orders">Manage Orders</a></li>
+                        </ng-container>
                         <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
                     </ul>
                 </li>

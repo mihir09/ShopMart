@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AngularFireList, AngularFireObject } from '@angular/fire/compat/database';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoryService } from 'src/app/category.service';
 import { ProductService } from 'src/app/product.service';
@@ -19,7 +18,7 @@ export class ProductFormComponent {
     private route: ActivatedRoute,
     private categoryService: CategoryService,
     private productService: ProductService){
-    this.categories$ = categoryService.getCategories();
+    this.categories$ = this.categoryService.getCategories();
 
     this.id = this.route.snapshot.paramMap.get('id');
     if (this.id) this.productService.get(this.id).valueChanges().take(1).subscribe(p=> this.product = p);

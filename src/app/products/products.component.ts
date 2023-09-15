@@ -3,8 +3,6 @@ import { ProductService } from '../product.service';
 import { ActivatedRoute } from '@angular/router';
 import 'rxjs-compat/add/operator/switchMap';
 import { ShoppingCartService } from '../shopping-cart.service';
-import { Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { ShoppingCart } from 'src/models/shopping-cart';
 
