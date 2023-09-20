@@ -1,14 +1,18 @@
 # ShopMart
 <p>
-An online shopping application built using Angular. It features user-authentication using Firebsae Google Auth Provider. Protected links that are only visible to admin and some requires uers to be logged in.
+An online shopping application built using Angular. It features user-authentication using Firebsae Google Auth Provider. Protected links that are only visible to admin and some requires uers to be logged in. It allows users to filter display products based on categories. Users can add/remove products to/from cart. Displays total car value and all the cart items in shopping cart page. Needs to add shipping details for placing orders. 
 
 Current features and visibility:
 
 Home,<br>
 Shopping Cart,<br>
 Products,<br>
-Manage Products - Login reguired (Soon to be changed to admin only),<br>
-Manage Products -> Add Products - Login reguired (Soon to be changed to admin only)
+Check Out,<br>
+Place Order,<br>
+My Orders,<br>
+Manage Products - Login reguired (admin only),<br>
+Manage Products -> Add Products - Login reguired (admin only), <br>
+Manage Orders - Login reguired (admin only), <br>
 
 ### Products
 Provides categories filter to display products only related to category. Sticky options so that categories can be selected while scrolling products.
@@ -26,7 +30,9 @@ It shows a list of products in cart and the quantiy, price and total price of ea
 
 It also shows the total value of the cart along with total quantity.
 
-Need to resolve issue when making quantity 0 dosen't remove product from the cart.
+Can checkout the cart which requires users to add shipping address and then place order.
+
+All the orders are saved and can be managed by admins.
 
 ### Manage Products -> Add Products
 Adding product using Template driven forms
@@ -136,3 +142,23 @@ https://shopmart-698a1.web.app/
 11. Clear Shopping Cart
 
 ![Clear Shopping Cart](gitSnaps/ClearShoppingCart.png "Clear Shopping Cart")
+
+12. Updated Shopping Cart with Checkout
+
+![Updated Shopping Cart with Checkout](gitSnaps/ShoppingCartWithCheckOut.png "Updated Shopping Cart with Checkout")
+
+13. Check Out
+
+![Check Out](gitSnaps/CheckOut.png "Check Out")
+
+14. Successfully Order Placed
+
+![Successfully Order Placed](gitSnaps/SuccessfullOrder.png "Successfully Order Placed")
+
+15. My Orders
+
+![My Orders](gitSnaps/MyOrders.png "My Orders")
+
+16. Admin Manage Orders
+
+![Admin Manage Orders](gitSnaps/AdminManageOrders.png "Admin Manage Orders")
