@@ -1,11 +1,11 @@
-<div class="row no-gutters">
-    <div class="col-3">
-        <button (click)="removeFromCart()" class="btn btn-secondary w-100 d-block">-</button>
+<div class="quantity-update row g-0">
+    <div class="quantity-update-btn col-3 p-0 my-0 d-flex justify-content-center">
+        <button (click)="removeFromCart()" class="btn btn-link d-block w-100"><i class="fas fa-minus"></i></button>
     </div>
     
-    <div class="col">{{ shoppingCart.getQuantity(product) }} in cart</div>
+    <div class="quantity col p-0 m-0 aling-items-center">{{ shoppingCart.getQuantity(product) }}</div>
 
-    <div class="col-3">
-        <button (click)="addToCart()" class="btn btn-secondary w-100 d-block">+</button>
+    <div class="quantity-update-btn col-3 p-0 my-0 d-flex justify-content-center">
+        <button (click)="addToCart()" class="btn btn-link d-block w-100"><i class="fas fa-plus"></i></button>
     </div>
 </div>

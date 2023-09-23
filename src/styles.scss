@@ -37,7 +37,7 @@ h1, h2, h3 {
   border-color: $primary-color;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary:focus-visible, .btn-primary:active, .btn:first-child:active{
   background-color: $primary-color-hover;
   border-color: $primary-color-hover;
 }
@@ -49,4 +49,20 @@ h1, h2, h3 {
 
 .form-control:focus {
   border-color: $primary-color;
+}
+
+
+.card{
+  border: 0;
+}
+
+.card-footer{
+  width: 60%;
+  border: 0;
+}
+
+.quantity-update-btn .btn{
+  padding: 0%;
+  height: 37px;
+  line-height: 37px;
 }
