@@ -9,12 +9,13 @@ import { OrderService } from 'shared/services/order.service';
   styleUrls: ['./my-orders.component.css']
 })
 export class MyOrdersComponent {
-  orders$: any;
+  orders: any;
   
   constructor(
     private authService: AuthService,
     private orderService: OrderService) { 
 
-      this.orders$ = this.authService.user$.switchMap(u => this.orderService.getOrdersByUser(u!.uid).valueChanges());
+      this.authService.user$.switchMap(u => this.orderService.getOrdersByUser(u!.uid)).subscribe(res=> {this.orders = res});
+
   }
 }

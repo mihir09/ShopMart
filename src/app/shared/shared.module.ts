@@ -4,6 +4,7 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MaterialModule } from 'app/material/material.module';
 
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductQuantityComponent } from './components/product-quantity/product-quantity.component';
@@ -14,6 +15,7 @@ import { OrderService } from './services/order.service';
 import { ProductService } from './services/product.service';
 import { ShoppingCartService } from './services/shopping-cart.service';
 import { UserService } from './services/user.service';
+
 
 
 @NgModule({
@@ -27,6 +29,7 @@ import { UserService } from './services/user.service';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     NgbModule,
+    MaterialModule,
   ],
   exports: [
     CommonModule,
@@ -36,6 +39,7 @@ import { UserService } from './services/user.service';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     NgbModule,
+    MaterialModule,
   ],
   providers: [
     AuthService,

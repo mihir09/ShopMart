@@ -11,7 +11,10 @@ import { ProductsComponent } from './components/products/products.component';
 import { ShippingFormComponent } from './components/shipping-form/shipping-form.component';
 import { ShoppingCartSummaryComponent } from './components/shopping-cart-summary/shopping-cart-summary.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+// import { PaymentDetailsComponent } from './components/payment-details/payment-details.component';
 
+// import { NgxStripeModule } from 'ngx-stripe';
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +26,8 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
     OrderSuccessComponent,
     ShoppingCartSummaryComponent,
     ShippingFormComponent,
+    // PaymentDetailsComponent,
+    OrderDetailsComponent,
   ],
   imports: [
     SharedModule,
@@ -32,7 +37,10 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
       { path:'check-out', component: CheckOutComponent, canActivate: [AuthGuard]},
       { path:'order-success/:id', component: OrderSuccessComponent, canActivate: [AuthGuard]},
       { path:'my-orders', component: MyOrdersComponent, canActivate: [AuthGuard]},
-    ])
+      { path:'order-details/:id', component: OrderDetailsComponent, canActivate: [AuthGuard] }
+
+    ]),
+    // NgxStripeModule.forChild(),
   ]
 })
 export class ShoppingModule { }

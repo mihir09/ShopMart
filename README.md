@@ -1,6 +1,6 @@
 # ShopMart
 <p>
-An online shopping application built using Angular. It features user-authentication using Firebsae Google Auth Provider. Protected links that are only visible to admin and some requires uers to be logged in. It allows users to filter display products based on categories. Users can add/remove products to/from cart. Displays total car value and all the cart items in shopping cart page. Needs to add shipping details for placing orders. 
+An online shopping application built using Angular. It features user-authentication using Firebsae Google Auth Provider. Protected links that are only visible to admin and some requires uers to be logged in. It allows users to filter display products based on categories. Users can add/remove products to/from cart. Displays total cart value and all the cart items in shopping cart page. Needs to add shipping details for placing orders. 
 
 Current features and visibility:
 

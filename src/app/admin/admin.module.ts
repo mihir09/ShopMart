@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { MaterialModule } from 'app/material/material.module';
 import { AuthGuardService as AuthGuard } from 'shared/services/auth-guard.service';
 import { SharedModule } from 'shared/shared.module';
 
@@ -17,7 +16,6 @@ import { AdminAuthGuardService as AdminAuthGuard } from './services/admin-auth-g
   ],
   imports: [
     SharedModule,
-    MaterialModule,
     RouterModule.forChild([
       { path:'admin/products/new', component: ProductFormComponent, canActivate: [AuthGuard, AdminAuthGuard]},
       { path:'admin/products/:id', component: ProductFormComponent, canActivate: [AuthGuard, AdminAuthGuard]},

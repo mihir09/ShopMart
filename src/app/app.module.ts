@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'shared/shared.module';
+import { NgxStripeModule } from 'ngx-stripe';
 
 import { environment } from './../environments/environment';
 import { AdminModule } from './admin/admin.module';
@@ -31,7 +32,8 @@ import { ShoppingModule } from './shopping/shopping.module';
       { path:'', component: HomeComponent},
       { path:'login', component: LoginComponent}
     ]),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxStripeModule.forRoot(environment.stripe.publicKey)
   ],
   bootstrap: [AppComponent]
 })
